@@ -18,10 +18,8 @@ def tokenize(text: str) -> list:
 
 
 def load_file(filename: str):
-    result = None
     with open(filename) as file:
-        result = json.loads(file.read())
-    return result
+        return json.loads(file.read())
 
 
 def save_file(filename: str, content):
