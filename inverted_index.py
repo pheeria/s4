@@ -18,12 +18,12 @@ while True:
 
     end = time()
 
-    print(f"Found {len(search_results)} results out of total {len(store)} in {(end - start) * 1000:.2f}μs")
+    print(f"Found {len(search_results)} results out of total {len(store['source'])} in {(end - start) * 1000:.2f}μs")
     print("-- -- -- --")
 
     print(search_results)
     for doc_id in search_results[:3]:
-        pretty_print(store["source"][str(doc_id)]["venue"])
+        pretty_print(store["source"][str(doc_id)])
 
 
 

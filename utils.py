@@ -4,10 +4,11 @@ from unicodedata import normalize
 
 
 def pretty_print(restaurant: dict):
-    cuisines = ", ".join(restaurant["tags"])
-    print(restaurant["name"])
-    print(restaurant["short_description"])
-    rating = restaurant["rating"]["score"] if "rating" in restaurant else 0
+    venue = restaurant["venue"]
+    cuisines = ", ".join(venue["tags"])
+    rating = venue["rating"]["score"] if "rating" in venue else 0
+    print(venue["name"])
+    print(venue["short_description"])
     print(f"Rating: {rating}, Tags: {cuisines}")
     print()
 

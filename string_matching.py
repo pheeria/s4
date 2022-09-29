@@ -15,7 +15,7 @@ while True:
         if (query in restaurant["name"]
             or query in restaurant["short_description"]
             or query in restaurant["tags"]):
-            search_results.append(restaurant)
+            search_results.append(each)
 
     end = time()
 
