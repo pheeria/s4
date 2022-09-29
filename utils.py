@@ -5,7 +5,7 @@ from unicodedata import normalize
 
 def pretty_print(restaurant: dict):
     cuisines = ", ".join(restaurant["tags"])
-    print(f"{restaurant['name']}")
+    print(restaurant["name"])
     print(restaurant["short_description"])
     rating = restaurant["rating"]["score"] if "rating" in restaurant else 0
     print(f"Rating: {rating}, Tags: {cuisines}")
