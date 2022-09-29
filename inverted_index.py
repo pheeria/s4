@@ -1,7 +1,7 @@
 from time import time
-from utils import load, pretty_print, tokenize
+from utils import load_file, pretty_print, tokenize
 
-store = load("./s4.json")
+store = load_file("./s4.json")
 
 while True:
     search_results = []

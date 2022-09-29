@@ -16,7 +16,7 @@ def tokenize(text: str) -> list:
             for token in re.split(r"\W+", text.lower())]
 
 
-def load(filename: str):
+def load_file(filename: str):
     result = None
     with open(filename) as file:
         result = json.loads(file.read())
