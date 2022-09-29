@@ -1,9 +1,8 @@
-import json
 from time import time
 
-restaurants = []
-with open("./germany.json") as file:
-    restaurants = json.loads(file.read())
+from utils import load_file, pretty_print
+
+restaurants = load_file("./germany.json")
 
 while True:
     search_results = []
@@ -24,11 +23,5 @@ while True:
     print("-- -- -- --")
 
     for restaurant in search_results[:3]:
-        cuisines = ", ".join(restaurant["tags"])
-        print(f"{restaurant['name']}")
-        print(restaurant["short_description"])
-        print(f"Rating: {restaurant['rating']['score']}, Tags: {cuisines}")
-        print()
-
-
+        pretty_print(restaurant)
 
