@@ -21,3 +21,9 @@ def load_file(filename: str):
     with open(filename) as file:
         result = json.loads(file.read())
     return result
+
+
+def save_file(filename: str, content):
+    with open(filename, "w") as file:
+        file.write(json.dumps(content, indent=4))
+

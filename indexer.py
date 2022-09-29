@@ -1,7 +1,7 @@
 import re
 import json
 from unicodedata import normalize
-from utils import load_file
+from utils import load_file, save_file
 
 documents = load_file("./germany.json")
 
@@ -36,5 +36,4 @@ for i, document in enumerate(documents):
     populate(index["indices"]["tags"], restaurant["tags"], i)
 
 
-with open("./s4.json", "w") as file:
-    file.write(json.dumps(index, indent=4))
+save_file("./s4.json", index)
