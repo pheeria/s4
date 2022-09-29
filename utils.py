@@ -7,7 +7,8 @@ def pretty_print(restaurant: dict):
     cuisines = ", ".join(restaurant["tags"])
     print(f"{restaurant['name']}")
     print(restaurant["short_description"])
-    print(f"Rating: {restaurant['rating']['score']}, Tags: {cuisines}")
+    rating = restaurant["rating"]["score"] if "rating" in restaurant else 0
+    print(f"Rating: {rating}, Tags: {cuisines}")
     print()
 
 
