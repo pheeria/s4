@@ -22,8 +22,8 @@ while True:
     print("-- -- -- --")
 
     print(search_results)
-    # for restaurant in search_results[:3]:
-    #     pretty_print(restaurant)
+    for doc_id in search_results[:3]:
+        pretty_print(store["source"][str(doc_id)]["venue"])
 
 
 
