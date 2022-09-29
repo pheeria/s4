@@ -1,7 +1,4 @@
-import re
-import json
-from unicodedata import normalize
-from utils import load_file, save_file
+from utils import load_file, save_file, tokenize
 
 documents = load_file("./germany.json")
 
@@ -13,11 +10,6 @@ index = {
     },
     "source": {}
 }
-
-
-def tokenize(text: str) -> list: 
-    return [normalize("NFKD", token).encode("ASCII", "ignore").decode("ASCII")
-            for token in re.split(r"\W+", text.lower())]
 
 
 def populate(store: dict, tokens: list, source_index: int) -> None:
